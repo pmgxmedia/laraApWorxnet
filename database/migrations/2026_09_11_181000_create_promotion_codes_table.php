@@ -1,0 +1,29 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up()
+    {
+        Schema::create('promotion_codes', function (Blueprint $table) {
+            $table->id();
+            $table->string('code')->unique();
+            $table->foreignId('promotion_id')->nullable()->constrained()->nullOnDelete();
+            $table->enum('discount_type', ['percent', 'fixed'])->default('percent');
+            $table->decimal('discount_value', 10, 2)->default(0);
+            $table->unsignedInteger('max_redemptions')->nullable();
+            $table->unsignedInteger('redemptions')->default(0);
+            $table->timestamp('expires_at')->nullable();
+            $table->boolean('is_active')->default(true);
+            $table->timestamps();
+        });
+    }
+
+    public function down()
+    {
+        Schema::dropIfExists('promotion_codes');
+    }
+};

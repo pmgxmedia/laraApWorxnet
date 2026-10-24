@@ -1,4 +1,8 @@
 /node_modules
+/deploy
+/WorxFile.zip
+/public/Public.zip
+worxdatabase.sql
 /public/build
 /public/hot
 /public/storage

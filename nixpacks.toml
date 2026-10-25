@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["php81", "php81Extensions.pdo", "php81Extensions.pdo_mysql", "php81Extensions.mbstring", "php81Extensions.bcmath", "php81Extensions.curl", "php81Extensions.zip", "php81Extensions.openssl", "php81Extensions.tokenizer", "php81Extensions.xml", "php81Extensions.dom", "php81Extensions.fileinfo", "php81Extensions.intl", "php81Extensions.gd", "nodejs_20", "composer"]
+nixPkgs = ["php82", "php82Extensions.pdo", "php82Extensions.pdo_mysql", "php82Extensions.mbstring", "php82Extensions.bcmath", "php82Extensions.curl", "php82Extensions.zip", "php82Extensions.openssl", "php82Extensions.tokenizer", "php82Extensions.xml", "php82Extensions.dom", "php82Extensions.fileinfo", "php82Extensions.intl", "php82Extensions.gd", "nodejs_20", "composer"]
 
 [phases.install]
 cmds = [

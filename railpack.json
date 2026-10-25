@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "build": {
+    "env": {
+      "RAILPACK_PHP_VERSION": "8.1"
+    }
+  }
+}
